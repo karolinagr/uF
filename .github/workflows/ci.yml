@@ -9,13 +9,22 @@ on:
       - main
 
 jobs:
-  build:
-
+  test:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-
-    - name: Zażółć
-      run: echo Zażółć
+    - name: run unittest
+      run: python -m unittest discover
+  formatting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: create venv
+        run: python -m venv venv
+      - name: activate venv and check formatting
+        run: |
+          source venv/bin/activate
+          pip install pycodestyle
+          pycodestyle --exclude=venv ./
