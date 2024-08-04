@@ -14,4 +14,4 @@ def fibonacci(n):
 
 
 if __name__ == "__main__":
-    fibonacci(1000)
+    print(fibonacci(17))
