@@ -17,5 +17,5 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Zażółć
-      run: echo Zażółć
+    - name: run unittest
+      run: python -m unittest discover
