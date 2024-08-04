@@ -26,4 +26,5 @@ jobs:
       - name: activate venv and check formatting
         run: |
           source venv/bin/activate
+          pip install pycodestyle
           pycodestyle --exclude=venv ./
