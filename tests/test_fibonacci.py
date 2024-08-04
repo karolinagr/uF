@@ -27,3 +27,8 @@ class TestFibonacci(unittest.TestCase):
         actual = fibonacci(10)
         expected = 34
         self.assertEqual(expected, actual)
+
+    def test_fibonacci_seventeenth(self):
+        actual = fibonacci(17)
+        expected = 987
+        self.assertEqual(expected, actual)
